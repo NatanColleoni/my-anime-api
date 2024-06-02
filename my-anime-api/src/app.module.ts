@@ -6,6 +6,11 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { CacheConfigModule } from './cache/cache.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { ResponseTime, ResponseTimeSchema } from './common/interceptor/schemas/response-time.schema';
+import { ErrorMessage, ErrorMessageSchema } from './common/interceptor/schemas/error-message.schema';
+import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
+import { ResponseTimeInterceptor } from './common/interceptor/response-time.interceptor';
+import { ErrorFilter } from './common/interceptor/error.filter';
 
 @Module({
   imports: [
@@ -21,10 +26,22 @@ import { UsersModule } from './users/users.module';
         uri: configService.get('MONGO_URL'),
       }),
     }),
+    MongooseModule.forFeature([{ name: ResponseTime.name, schema: ResponseTimeSchema }]),
+    MongooseModule.forFeature([{ name: ErrorMessage.name, schema: ErrorMessageSchema }]),
     AuthModule,
     UsersModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: ResponseTimeInterceptor,
+    },
+    {
+      provide: APP_FILTER,
+      useClass: ErrorFilter,
+    },
+  ],
 })
 export class AppModule {}
