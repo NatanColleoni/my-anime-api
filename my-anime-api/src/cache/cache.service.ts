@@ -23,7 +23,7 @@ export class CacheService {
   async set<T>(
     key: string,
     value: T,
-    expiration: number = 300000, // cache expira em 5 minutos
+    expiration: number = 300000 // cache expira em 5 minutos
   ): Promise<void> {
     try {
       const serializeValue = JSON.stringify(value);
