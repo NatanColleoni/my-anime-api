@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
-import { Logger } from '@nestjs/common';
+import { Logger, ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
@@ -18,6 +18,7 @@ async function bootstrap() {
 
   const port = configService.get('PORT') || 3000;
   app.useGlobalInterceptors();
+  app.useGlobalPipes(new ValidationPipe({ transform: true }));
   await app.listen(port, () => {
     logger.log(`Server is running on port ${port}`);
   });

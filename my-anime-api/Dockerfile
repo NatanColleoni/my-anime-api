@@ -4,10 +4,11 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm ci
+RUN npm install
+RUN npm install bcrypt
 
 COPY . .
 
 EXPOSE 3000
 
-CMD [ "npm", "start:dev" ]
+CMD [ "npm", "start" ]

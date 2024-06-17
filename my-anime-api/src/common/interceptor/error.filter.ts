@@ -7,13 +7,25 @@ import { ErrorMessage } from './schemas/error-message.schema';
 export class ErrorFilter implements ExceptionFilter {
   constructor(@InjectModel(ErrorMessage.name) private errorMessageModel: Model<ErrorMessage>) {}
 
-  catch(exception: HttpException, host: ArgumentsHost) {
-    const httpRequest = host.switchToHttp();
+  async catch(exception: HttpException, host: ArgumentsHost) {
+    const ctx = host.switchToHttp();
+    const response = ctx.getResponse();
+    const request = ctx.getRequest();
 
-    this.errorMessageModel.create({
-      method: httpRequest.getRequest().method,
-      route: httpRequest.getRequest().url,
-      error_message: `${exception}`,
+    const status = exception.getStatus();
+    const message = exception.getResponse() as string;
+
+    await this.errorMessageModel.create({
+      method: request.method,
+      route: request.url,
+      error_message: `${message}`,
+    });
+
+    response.status(status).json({
+      statusCode: status,
+      message: JSON.stringify(message),
+      timestamp: new Date().toISOString(),
+      path: request.url,
     });
   }
 }

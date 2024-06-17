@@ -11,6 +11,7 @@ import { ErrorMessage, ErrorMessageSchema } from './common/interceptor/schemas/e
 import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { ResponseTimeInterceptor } from './common/interceptor/response-time.interceptor';
 import { ErrorFilter } from './common/interceptor/error.filter';
+import { AnimesModule } from './animes/animes.module';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import { ErrorFilter } from './common/interceptor/error.filter';
     MongooseModule.forFeature([{ name: ErrorMessage.name, schema: ErrorMessageSchema }]),
     AuthModule,
     UsersModule,
+    AnimesModule,
   ],
   controllers: [AppController],
   providers: [
@@ -39,7 +41,7 @@ import { ErrorFilter } from './common/interceptor/error.filter';
       useClass: ResponseTimeInterceptor,
     },
     {
-      provide: APP_FILTER,
+      provide: APP_FILTER, // tratamento de exceções
       useClass: ErrorFilter,
     },
   ],

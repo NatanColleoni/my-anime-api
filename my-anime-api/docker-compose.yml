@@ -4,24 +4,30 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    networks:
+      - app-network
     ports:
       - '3000:3000'
     volumes:
       - ./backend:/app/backend
     env_file:
-      - ./backend/.env.development.local
+      - ./src/.env.development.local
     depends_on:
       - mongodb
       - redis
 
   mongodb:
     image: mongo
+    networks:
+      - app-network
     ports:
       - '27017:27017'
     volumes:
       - mongo_data:/data/db
   redis:
     image: redis
+    networks:
+      - app-network
     ports:
       - '6379:6379'
     volumes:
@@ -30,3 +36,7 @@ services:
 volumes:
   mongo_data:
   redis_data:
+
+networks:
+  app-network:
+    driver: bridge
