@@ -11,8 +11,10 @@ export class UsersService {
 
   async create(createUserDto: CreateUserDto) {
     createUserDto.password = await this.userHash(createUserDto.password);
+    const newUser = new this.userModel(createUserDto);
+    await newUser.save();
 
-    this.userModel.create(createUserDto);
+    return this.userModel.findOne({ email: createUserDto.email }).select('-password');
   }
 
   findOne(email: string) {

@@ -12,6 +12,7 @@ import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { ResponseTimeInterceptor } from './common/interceptor/response-time.interceptor';
 import { ErrorFilter } from './common/interceptor/error.filter';
 import { AnimesModule } from './animes/animes.module';
+import { AnimesListModule } from './animes-list/animes-list.module';
 
 @Module({
   imports: [
@@ -32,6 +33,7 @@ import { AnimesModule } from './animes/animes.module';
     AuthModule,
     UsersModule,
     AnimesModule,
+    AnimesListModule,
   ],
   controllers: [AppController],
   providers: [
