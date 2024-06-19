@@ -1,0 +1,589 @@
+{
+	"info": {
+		"_postman_id": "61bc35b4-6be1-48bb-8cab-a2a7a9100c1b",
+		"name": "MyAnimeList Integração  - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30264139"
+	},
+	"item": [
+		{
+			"name": "Fetch do MAL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY3MmRjMGY0NGI1YWY4NDViYjE4NWUwIiwiZW1haWwiOiJuYXRhbmNvbGxlb25pZm9uc2VjYUBnbWFpbC5jb20uYnIiLCJpYXQiOjE3MTg4MDM0NzksImV4cCI6MTcxODgwNDA3OX0.wshbEcMipoCehV8YDguGe8OB6I7KuybhrkuGHvXNPc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/animes/fetch-mal-animes-list?query=naruto&limit=100&offset=0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"animes",
+						"fetch-mal-animes-list"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "naruto"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch do MAL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/animes/fetch-mal-animes-list?query=naruto&limit=100&offset=0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animes",
+								"fetch-mal-animes-list"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "naruto"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27020"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"698c-REOfv9txoSuzOEHFiwIj7GBWegs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jun 2024 14:48:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"66704b27f87f65e8caae542a\",\n        \"mal_id\": 53236,\n        \"title\": \"Road of Naruto\",\n        \"description\": \"In celebration of 20 years of Naruto, Studio Pierrot posted an anniversary PV on their YouTube channel. The PV is a compilation of newly reworked scenes from Naruto containing new animation.\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1731/128787l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2022-10-03\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5430\",\n        \"mal_id\": 54687,\n        \"title\": \"Boruto: Naruto Next Generations Part 2\",\n        \"description\": \"\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1604/134068l.jpg\",\n        \"num_episodes\": 0,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5435\",\n        \"mal_id\": 54688,\n        \"title\": \"Naruto (Shinsaku Anime)\",\n        \"description\": \"A new anime project in celebration of Naruto's 20th anniversary.\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1378/137310l.jpg\",\n        \"num_episodes\": 4,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541a\",\n        \"mal_id\": 1735,\n        \"title\": \"Naruto: Shippuuden\",\n        \"description\": \"It has been two and a half years since Naruto Uzumaki left Konohagakure, the Hidden Leaf Village, for intense training following events which fueled his desire to be stronger. Now Akatsuki, the mysterious organization of elite rogue ninja, is closing in on their grand plan which may threaten the safety of the entire shinobi world.\\n \\nAlthough Naruto is older and sinister events loom on the horizon, he has changed little in personality—still rambunctious and childish—though he is now far more confident and possesses an even greater determination to protect his friends and home. Come whatever may, Naruto will carry on with the fight for what is important to him, even at the expense of his own body, in the continuation of the saga about the boy who wishes to become Hokage.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1565/111305l.webp\",\n        \"num_episodes\": 500,\n        \"start_date\": \"2007-02-15\",\n        \"rank\": 296,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5426\",\n        \"mal_id\": 20,\n        \"title\": \"Naruto\",\n        \"description\": \"Moments before Naruto Uzumaki's birth, a huge demon known as the Nine-Tailed Fox attacked Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the demon's rampage, the leader of the village, the Fourth Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto.\\n\\nIn the present, Naruto is a hyperactive and knuckle-headed ninja growing up within Konohagakure. Shunned because of the demon inside him, Naruto struggles to find his place in the village. His one burning desire to become the Hokage and be acknowledged by the villagers who despite him. However, while his goal leads him to unbreakable bonds with lifelong friends, it also lands him in the crosshairs of many deadly foes.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1141/142503l.jpg\",\n        \"num_episodes\": 220,\n        \"start_date\": \"2002-10-03\",\n        \"rank\": 643,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541b\",\n        \"mal_id\": 16870,\n        \"title\": \"The Last: Naruto the Movie\",\n        \"description\": \"Two years have passed since the end of the Fourth Great Ninja War. Konohagakure has remained in a state of peace and harmony—until Sixth Hokage Kakashi Hatake notices the moon is dangerously approaching the Earth, posing the threat of planetary ruin.\\n\\nAmidst the grave ordeal, Konoha is invaded by a new evil, Toneri Oosutuski, who suddenly abducts Hinata Hyuuga's little sister Hanabi. Kakashi dispatches a skilled ninja team comprised of Naruto Uzumaki, Sakura Haruno, Shikamaru Nara, Sai, and Hinata in an effort to rescue Hanabi from the diabolical clutches of Toneri. However, during their mission, the team faces several obstacles that challenge them, foiling their efforts.\\n\\nWith her abduction, the relationships the team share with one another are tested, and with the world reaching the brink of destruction, they must race against time to ensure the safety of their planet. Meanwhile, as the battle ensues, Naruto is driven to fight for something greater than he has ever imagined—love.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1491/134498l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2014-12-06\",\n        \"rank\": 999,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5421\",\n        \"mal_id\": 13667,\n        \"title\": \"Naruto: Shippuuden Movie 6 - Road to Ninja\",\n        \"description\": \"Returning home to Konohagakure, the young ninja celebrate defeating a group of supposed Akatsuki members. Naruto Uzumaki and Sakura Haruno, however, feel differently. Naruto is jealous of his comrades' congratulatory families, wishing for the presence of his own parents. Sakura, on the other hand, is angry at her embarrassing parents, and wishes for no parents at all. The two clash over their opposing ideals, but are faced with a more pressing matter when the masked Madara Uchiha suddenly appears and transports them to an alternate world.\\n\\nIn this world, Sakura's parents are considered heroes—for they gave their lives to protect Konohagakure from the Nine-Tailed Fox attack 10 years ago. Consequently, Naruto's parents, Minato Namikaze and Kushina Uzumaki, are alive and well. Unable to return home or find the masked Madara, Naruto and Sakura stay in this new world and enjoy the changes they have always longed for. All seems well for the two ninja, until an unexpected threat emerges that pushes Naruto and Sakura to not only fight for the Konohagakure of the alternate world, but also to find a way back to their own.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1620/94336l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2012-07-28\",\n        \"rank\": 1282,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae542d\",\n        \"mal_id\": 19511,\n        \"title\": \"Naruto: Shippuuden - Sunny Side Battle\",\n        \"description\": \"Back at their childhood home, siblings Itachi and Sasuke Uchiha experience an unusual morning together when Itachi becomes obsessed with cooking the perfect fried egg for Sasuke. Despite being completely focused on the task, he continuously fails to achieve the desired result. As Sasuke marvels at his brother's seemingly unnecessary behavior, he comes to realize that there is more than meets the eye to Itachi's efforts.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1047/91638l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2013-10-06\",\n        \"rank\": 1584,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541f\",\n        \"mal_id\": 10589,\n        \"title\": \"Naruto: Shippuuden Movie 5 - Blood Prison\",\n        \"description\": \"During their discussion of a sensitive investigation A, the Fourth Raikage, and his subordinates are ambushed by a cloaked intruder. As the Kumogakure leader repels the assault, he is shocked to discover that the culprit is Naruto Uzumaki! \\n\\nHowever, the assassination attempt is not the only crime attributed to the young ninja, who vigorously denies the accusations. To avoid a diplomatic conflict, Tsunade forcibly sends him to Kusagakure's Houzuki Castle—a maximum-security penitentiary dedicated to ninja criminals—until the situation is resolved.\\n\\nDespite his powers being immediately suppressed by Mui, the prison's warden who possesses the ability to seal chakra, Naruto recklessly engages in futile escape attempts. But with the help of two fellow inmates, he realizes that there is more to this legendary detention facility than meets the eye. Uncovering a terrible secret, the trio embarks on a dangerous operation that may be Naruto's only chance to break free and prove his innocence.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1500/134496l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2011-07-30\",\n        \"rank\": 2016,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541d\",\n        \"mal_id\": 8246,\n        \"title\": \"Naruto: Shippuuden Movie 4 - The Lost Tower\",\n        \"description\": \"Led by Yamato, Naruto Uzumaki, Sakura Haruno, and Sai are assigned to capture Mukade, a rogue ninja who is pursuing the ancient chakra Ryuumyaku located underneath the Rouran ruins. While the Ryuumyaku has been sealed by the Fourth Hokage, the group fails to prevent Mukade from releasing its power. Consequently, a strong energy burst engulfs both Naruto and Yamato before they can escape.\\n\\nAs he awakens in a magnificent yet hostile kingdom, Naruto meets its young queen Saara and three Konohagakure ninjas on a top-secret mission. They reveal to him that he has time-traveled to Rouran 20 years into the past! To make matters worse, Mukade has already infiltrated the royal court, becoming the naive queen's most trusted minister under the alias Anrokuzan.\\n\\nJoining forces with the three ninjas, Naruto must protect Saara's life without fail to stop the villain's plans and return to the present.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1479/116734l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2010-07-31\",\n        \"rank\": 2151,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541c\",\n        \"mal_id\": 28755,\n        \"title\": \"Boruto: Naruto the Movie\",\n        \"description\": \"The spirited Boruto Uzumaki, son of Seventh Hokage Naruto, is a skilled ninja who possesses the same brashness and passion his father once had. However, the constant absence of his father, who is busy with his Hokage duties, puts a damper on Boruto's fire. Upon learning that his father will watch the aspiring ninjas who will participate in the upcoming Chunin exams, Boruto is driven to prove to him that he is worthy of his attention. In order to do so, he enlists the help of Naruto's childhood friend and rival, Sasuke Uchiha. \\n\\nThe Chunin exams begin and progress smoothly, until suddenly, the Konohagakure is attacked by a new foe that threatens the long-standing peace of the village. Now facing real danger, Naruto and his comrades must work together to protect the future of their cherished home and defeat the evil that terrorizes their world. As this battle ensues, Boruto comes to realize the struggles his father once experienced—and what it truly means to be a ninja.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/4/78280l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2015-08-07\",\n        \"rank\": 2327,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5429\",\n        \"mal_id\": 10075,\n        \"title\": \"Naruto x UT\",\n        \"description\": \"All-new animation offered throughout UNIQLO clothing stores in Japan on January 1, 2011. The DVD contains an exclusive version of Mayonaka Orchestra, by the Japanese rock band Aqua Timez. A limited number of the DVDs was offered as presents to people who bought UNIQLO's Naruto graphic T-shirts online or in their stores.\\n\\n(Source: ANN, edited)\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/3/30485l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2011-01-01\",\n        \"rank\": 2403,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5428\",\n        \"mal_id\": 6325,\n        \"title\": \"Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono\",\n        \"description\": \"After being sent to investigate the alarming disappearance of four bloodline limit-wielding ninjas from different countries, Kakashi Hatake, Naruto Uzumaki, Sakura Haruno, and Sai successfully discover their whereabouts and inform the Hokage. Unexpectedly, Tsunade's further arrangements fall apart when Hiruko—the mastermind behind the incident and also a former Konohagakure ninja obsessed with power—appears to announce that he has absorbed the missing ninjas' unique abilities. On the verge of becoming invincible, he seeks one more bloodline limit before starting an all-out war to take over the world.\\n\\nAs Konohagakure's past connections with Hiruko raise suspicions among the nations about its involvement in the affair, Tsunade receives an ultimatum to solve the crisis. Left with no other choice, she decides to follow Kakashi's lead after he presents a daring yet salutary scheme—a proposal that could send him to certain death. However, Naruto opposes such a plan! Despite the Hokage's decision, he is determined to save his teacher's life, even if it means fighting friend and foe alike.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1493/116732l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2009-08-01\",\n        \"rank\": 2548,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5420\",\n        \"mal_id\": 32365,\n        \"title\": \"Boruto: Naruto the Movie - Naruto ga Hokage ni Natta Hi\",\n        \"description\": \"Bundled with the limited edition of Blu-ray/DVD of Boruto: Naruto the Movie.\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/6/77678l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2016-07-06\",\n        \"rank\": 2587,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5422\",\n        \"mal_id\": 2472,\n        \"title\": \"Naruto: Shippuuden Movie 1\",\n        \"description\": \"A group of ninja is planning to revive a powerful demon, and once its spirit is reunited with its body, the world will be destroyed. The only way to prevent this from happening is for Shion, a shrine maiden, to seal it away for good.\\n\\nNaruto Uzumaki is tasked to guard her, but one thing stops Shion from accepting his help: she also has the ability to predict death—and she has foreseen his demise approaching soon. In order to escape his fate, Naruto must stay away from Shion; however, undeterred, he chooses to challenge the prophecy in order to protect Shion and the world.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1703/134493l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2007-08-04\",\n        \"rank\": 2763,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541e\",\n        \"mal_id\": 4437,\n        \"title\": \"Naruto: Shippuuden Movie 2 - Kizuna\",\n        \"description\": \"Unleashing a devastating surprise attack, flying ninjas from the Land of Sky are seeking revenge against their old enemy Konohagakure. Despite his eagerness to join the fight, Naruto Uzumaki is held up by Shinnou, a mysterious doctor who requires his assistance to save an injured person. While delivering the wounded man to the hospital, Naruto has an unexpected encounter with Amaru—a stormy youngster from a neighboring village desperately looking for Shinnou's help.\\n\\nMeanwhile, as the invaders withdraw to restore their forces, Tsunade seizes the opportunity to dispatch a small team including Sai, Shikamaru Nara, and Kakashi Hatake to strike down their base. Simultaneously, she commissions Naruto, Sakura Haruno, and Hinata Hyuuga to accompany Shinnou and Amaru on their journey. During this time, however, Orochimaru has his own schemes: he orders Sasuke Uchiha to bring him the doctor who specializes in the reincarnation technique.\\n\\nAs the escort group accidentally uncovers the sinister truth behind the attacks, tumultuous plans are set in motion. But even when confronted with an unforeseen reunion, Naruto does not waver in his endeavor to end the warfare and its disastrous effects.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1484/134494l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2008-08-02\",\n        \"rank\": 2827,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae542e\",\n        \"mal_id\": 10686,\n        \"title\": \"Naruto: Honoo no Chuunin Shiken! Naruto vs. Konohamaru!!\",\n        \"description\": \"As the Fourth Great Ninja War quickly approaches, Sunagakure hosts a special Chunin exam to strengthen the troops of the Allied Shinobi Forces. Among the participants are Konohamaru Sarutobi, an ambitious rookie, and Naruto Uzumaki, who has become a renowned ninja. Despite the significant disparity in skill, Konohamaru is excited at the prospect of proving himself in a competition against Naruto—the one person he both admires and sees as his rival.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/9/30813l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2011-07-30\",\n        \"rank\": 3319,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5424\",\n        \"mal_id\": 12979,\n        \"title\": \"Naruto SD: Rock Lee no Seishun Full-Power Ninden\",\n        \"description\": \"The competitive shinobi world has proven to be challenging for Rock Lee, who lacks the typically required abilities. To compensate for this handicap, the young ninja tenaciously endures severe training to hone his hand-to-hand combat skills. Whenever necessary, he also resorts to creative fighting techniques. With the constant support of his teammates Neji Hyuuga and Tenten, Lee readily embraces daring adventures as opportunities to advance on his path toward excellence.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/13/36475l.jpg\",\n        \"num_episodes\": 51,\n        \"start_date\": \"2012-04-03\",\n        \"rank\": 3394,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae542b\",\n        \"mal_id\": 4134,\n        \"title\": \"Naruto: Shippuuden - Shippuu! \\\"Konoha Gakuen\\\" Den\",\n        \"description\": \"Naruto school special.\\n\\nNaruto is a new cool student and when he meets Sasuke they start fighting.\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/5/51895l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2008-02-06\",\n        \"rank\": 3554,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5423\",\n        \"mal_id\": 442,\n        \"title\": \"Naruto Movie 1: Dai Katsugeki!! Yuki Hime Shinobu Houjou Dattebayo!\",\n        \"description\": \"Naruto Uzumaki and his squadmates, Sasuke Uchiha and Sakura Haruno, are sent on a mission to escort a movie crew on its way to film in the Land of Snow. They soon find out that they are accompanying a famous actress, Yukie Fujikaze, who persistently refuses to travel there, making the trip far more difficult than originally intended. After a surprising encounter with ninjas from the Land of Snow, Naruto discovers that there is more to Yukie than meets the eye.\\n \\nDai Katsugeki!! Yuki Hime Shinobu Houjou Dattebayo! follows the group as they attempt to overcome the obstacles in the Land of Snow and unveil Yukie's true purpose there as well.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1231/134484l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2004-08-21\",\n        \"rank\": 3637,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae542f\",\n        \"mal_id\": 10659,\n        \"title\": \"Naruto Soyokazeden Movie: Naruto to Mashin to Mitsu no Onegai Dattebayo!!\",\n        \"description\": \"While enjoying a barbecue alongside team members and peers, Naruto Uzumaki stumbles upon a strange old bottle that houses a genie! The mythical being is willing to grant three wishes, but in a flurry of excitement, Naruto ends up wasting the first two. Outraged, Sasuke Uchiha and Sakura Haruno start fighting with him over the last remaining chance.\\n\\nAs the other ninjas join the dispute, the whole matter—before they know it—turns into an all-out brawl for the precious container.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/10/31573l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2010-07-31\",\n        \"rank\": 4366,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5427\",\n        \"mal_id\": 2144,\n        \"title\": \"Naruto Movie 3: Dai Koufun! Mikazuki Jima no Animaru Panic Dattebayo!\",\n        \"description\": \"Led by Kakashi Hatake, Naruto Uzumaki, Sakura Haruno, and Rock Lee are tasked to escort the extravagant Prince Michiru Tsuki and his spoiled son Hikaru to the prosperous Land of Moon when the two return from a long trip around the world. As if guarding two whimsical high-ranked individuals was not challenging enough, the prince's reckless decision to acquire an entire circus during their journey—mainly to entertain Hikaru's wish of owning the saber-toothed tiger featured in the show—further propels the mission into disarray.\\n\\nJust as things are finally settling down, the arrival of Michiru's convoy at the Land of Moon is met with an unforeseen crisis—the greedy Chief Minister Shabadaba has taken over the country with the assistance of mysterious, powerful ninjas. While Kakashi's team relentlessly fights the enemy by any means necessary, the two princes are forced to confront a new outlook on life through adversity.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1918/134487l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2006-08-05\",\n        \"rank\": 4558,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5425\",\n        \"mal_id\": 936,\n        \"title\": \"Naruto Movie 2: Dai Gekitotsu! Maboroshi no Chiteiiseki Dattebayo!\",\n        \"description\": \"In a tumultuous effort, the Sunagakure ninjas attempt to repel an unforeseen invasion of mysterious armored warriors on the Land of Wind. Shortly afterwards, the same armored troops led by Temujin—a skilled knight of impressive power—ambush Naruto Uzumaki, Sakura Haruno, and Shikamaru Nara, who are on a mission to recover a lost ferret. Naruto and Temujin engage in a fierce fight that ends with both of them falling off a cliff.\\n\\nTaken aback by their friend's sudden misfortune, Sakura and Shikamaru witness yet another alarming development: a massive moving structure appears out of nowhere, ravaging any trees and rocks in its path. While Sakura sets off to find Naruto, Shikamaru infiltrates the imposing fortress in hopes of learning more about the critical situation. \\n\\nEntangled in a relentless conflict, the Konohagakure ninjas join forces with their Sunagakure counterparts to defeat the common enemy. However, amidst the turmoil, a clash between two different visions of an ideal world emerges.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1114/134485l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2005-08-06\",\n        \"rank\": 4726,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5436\",\n        \"mal_id\": 2248,\n        \"title\": \"Naruto: Dai Katsugeki!! Yuki Hime Shinobu Houjou Dattebayo! - Konoha no Sato no Dai Undoukai\",\n        \"description\": \"The Konohagakure Grand Sports Festival has begun with all ninja squads vying for the ultimate prize—a whole week of paid leave! Despite his enthusiasm to achieve victory alongside Sasuke Uchiha and Sakura Haruno, Naruto Uzumaki finds himself in a pinch due to unexpected digestion problems. Caught between the competition and his personal emergency, he faces never-ending obstacles in his frantic search for a way out of the troublesome situation.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1/2473l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2004-08-21\",\n        \"rank\": 4794,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5434\",\n        \"mal_id\": 1074,\n        \"title\": \"Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!\",\n        \"description\": \"Konohagakure hosts a special tournament for ninjas of all ranks, stirring up fervor among the rookies who are eager to prove themselves in a competition against their superiors. Additionally, the winner is granted the opportunity to create their own village decree! Despite his enthusiasm to claim the prize, Naruto Uzumaki fails to focus on the game's objective as he becomes obsessed with confronting his teacher, Kakashi Hatake, in single combat.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/10/11244l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2005-12-22\",\n        \"rank\": 5229,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5431\",\n        \"mal_id\": 7367,\n        \"title\": \"Naruto: The Cross Roads\",\n        \"description\": \"The operation to find a missing person goes awry when Kakashi Hatake falls victim to a suspicious trap and gets separated from his students Naruto Uzumaki, Sasuke Uchiha, and Sakura Haruno. To make matters worse, the trio is ambushed by mysterious ninjas who capture Sakura, prompting Naruto and Sasuke to give chase.\\n\\nAs the two boys engage in a dangerous battle, not even Sasuke's troubling discovery about the mission can deter them from their endeavor to reunite the team and accomplish their task.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/11/27050l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2009-10-12\",\n        \"rank\": 5230,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5437\",\n        \"mal_id\": 594,\n        \"title\": \"Naruto: Takigakure no Shitou - Ore ga Eiyuu Dattebayo!\",\n        \"description\": \"After safely escorting the cowardly Takigakure leader Shibuki to his homeland, Naruto Uzumaki, Sasuke Uchiha, and Sakura Haruno are taken aback by the village's sudden invasion of rogue ninjas. As their teacher Kakashi Hatake had departed for Konohagakure beforehand, the team is left to deal with the attacking forces on their own. \\n\\nWhile the group prepares for a rescue operation, they learn that Suien, the mastermind behind the assault, is pursuing the Hero Water—an elixir that briefly increases the chakra of those who drink it by tenfold. Knowing that the liquid is in Shibuki's possession, Suien takes the villagers hostage to use them as a bargaining chip. \\n\\nDespite the odds stacked against them, Naruto fights the enemy heroically, spurring Shibuki on to discover the courage to protect his people.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/11/20921l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2003-12-20\",\n        \"rank\": 5316,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5432\",\n        \"mal_id\": 761,\n        \"title\": \"Naruto: Akaki Yotsuba no Clover wo Sagase\",\n        \"description\": \"When Konohamaru Sarutobi asks Naruto Uzumaki for help, the latter readily accepts to join his young friend on a special mission—the retrieval of the legendary crimson four-leaf clover, rumored to have the ability to grant any wish. The miraculous plant is seemingly Konohamaru's only hope to prevent the departure of his sweetheart Kaede Yoshino, who must leave Konohagakure on account of her father's job. Despite the unique clover being located in a forbidden area, there is nothing stopping the two from bravely embarking on a perilous adventure to achieve their goal.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/12/11240l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2003-05-24\",\n        \"rank\": 6388,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae542c\",\n        \"mal_id\": 34566,\n        \"title\": \"Boruto: Naruto Next Generations\",\n        \"description\": \"Following the successful end of the Fourth Shinobi World War, Konohagakure has been enjoying a period of peace, prosperity, and extraordinary technological advancement. This is all due to the efforts of the Allied Shinobi Forces and the village's Seventh Hokage, Naruto Uzumaki. Now resembling a modern metropolis, Konohagakure has changed, particularly the life of a shinobi. Under the watchful eye of Naruto and his old comrades, a new generation of shinobi has stepped up to learn the ways of the ninja.\\n\\nBoruto Uzumaki is often the center of attention as the son of the Seventh Hokage. Despite having inherited Naruto's boisterous and stubborn demeanor, Boruto is considered a prodigy and is able to unleash his potential with the help of supportive friends and family. Unfortunately, this has only worsened his arrogance and his desire to surpass Naruto which, along with his father's busy lifestyle, has strained their relationship. However, a sinister force brewing within the village may threaten Boruto's carefree life.\\n\\nNew friends and familiar faces join Boruto as a new story begins.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1091/99847l.webp\",\n        \"num_episodes\": 293,\n        \"start_date\": \"2017-04-05\",\n        \"rank\": 9412,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5433\",\n        \"mal_id\": 36564,\n        \"title\": \"Kamiusagi Rope x Boruto: Naruto Next Generations\",\n        \"description\": \"A 3-way collaboration between Kamiusagi Rope, Boruto: Naruto Next Generations, and TOHO Cinemas. The purpose is to promote a new TOHO theater opening up in Ueno on November 4, 2017. The collaboration video will also be available to view in TOHO Cinemas in Tokyo, Kanagawa, Chiba, and Saitama from Ocotober 21 - December 1.\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/3/88377l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2017-10-12\",\n        \"rank\": 11625,\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Listar animes do banco",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY3MmRjMGY0NGI1YWY4NDViYjE4NWUwIiwiZW1haWwiOiJuYXRhbmNvbGxlb25pZm9uc2VjYUBnbWFpbC5jb20uYnIiLCJpYXQiOjE3MTg4MDM0NzksImV4cCI6MTcxODgwNDA3OX0.wshbEcMipoCehV8YDguGe8OB6I7KuybhrkuGHvXNPc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/animes/listar?query=naruto&limit=5&offset=0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"animes",
+						"listar"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "naruto"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listar animes do banco",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/animes/listar?query=naruto&limit=100&offset=0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animes",
+								"listar"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "naruto"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27020"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"698c-REOfv9txoSuzOEHFiwIj7GBWegs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jun 2024 14:49:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"66704b27f87f65e8caae542a\",\n        \"mal_id\": 53236,\n        \"title\": \"Road of Naruto\",\n        \"description\": \"In celebration of 20 years of Naruto, Studio Pierrot posted an anniversary PV on their YouTube channel. The PV is a compilation of newly reworked scenes from Naruto containing new animation.\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1731/128787l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2022-10-03\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5430\",\n        \"mal_id\": 54687,\n        \"title\": \"Boruto: Naruto Next Generations Part 2\",\n        \"description\": \"\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1604/134068l.jpg\",\n        \"num_episodes\": 0,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5435\",\n        \"mal_id\": 54688,\n        \"title\": \"Naruto (Shinsaku Anime)\",\n        \"description\": \"A new anime project in celebration of Naruto's 20th anniversary.\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1378/137310l.jpg\",\n        \"num_episodes\": 4,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541a\",\n        \"mal_id\": 1735,\n        \"title\": \"Naruto: Shippuuden\",\n        \"description\": \"It has been two and a half years since Naruto Uzumaki left Konohagakure, the Hidden Leaf Village, for intense training following events which fueled his desire to be stronger. Now Akatsuki, the mysterious organization of elite rogue ninja, is closing in on their grand plan which may threaten the safety of the entire shinobi world.\\n \\nAlthough Naruto is older and sinister events loom on the horizon, he has changed little in personality—still rambunctious and childish—though he is now far more confident and possesses an even greater determination to protect his friends and home. Come whatever may, Naruto will carry on with the fight for what is important to him, even at the expense of his own body, in the continuation of the saga about the boy who wishes to become Hokage.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1565/111305l.webp\",\n        \"num_episodes\": 500,\n        \"start_date\": \"2007-02-15\",\n        \"rank\": 296,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5426\",\n        \"mal_id\": 20,\n        \"title\": \"Naruto\",\n        \"description\": \"Moments before Naruto Uzumaki's birth, a huge demon known as the Nine-Tailed Fox attacked Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the demon's rampage, the leader of the village, the Fourth Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto.\\n\\nIn the present, Naruto is a hyperactive and knuckle-headed ninja growing up within Konohagakure. Shunned because of the demon inside him, Naruto struggles to find his place in the village. His one burning desire to become the Hokage and be acknowledged by the villagers who despite him. However, while his goal leads him to unbreakable bonds with lifelong friends, it also lands him in the crosshairs of many deadly foes.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1141/142503l.jpg\",\n        \"num_episodes\": 220,\n        \"start_date\": \"2002-10-03\",\n        \"rank\": 643,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541b\",\n        \"mal_id\": 16870,\n        \"title\": \"The Last: Naruto the Movie\",\n        \"description\": \"Two years have passed since the end of the Fourth Great Ninja War. Konohagakure has remained in a state of peace and harmony—until Sixth Hokage Kakashi Hatake notices the moon is dangerously approaching the Earth, posing the threat of planetary ruin.\\n\\nAmidst the grave ordeal, Konoha is invaded by a new evil, Toneri Oosutuski, who suddenly abducts Hinata Hyuuga's little sister Hanabi. Kakashi dispatches a skilled ninja team comprised of Naruto Uzumaki, Sakura Haruno, Shikamaru Nara, Sai, and Hinata in an effort to rescue Hanabi from the diabolical clutches of Toneri. However, during their mission, the team faces several obstacles that challenge them, foiling their efforts.\\n\\nWith her abduction, the relationships the team share with one another are tested, and with the world reaching the brink of destruction, they must race against time to ensure the safety of their planet. Meanwhile, as the battle ensues, Naruto is driven to fight for something greater than he has ever imagined—love.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1491/134498l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2014-12-06\",\n        \"rank\": 999,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5421\",\n        \"mal_id\": 13667,\n        \"title\": \"Naruto: Shippuuden Movie 6 - Road to Ninja\",\n        \"description\": \"Returning home to Konohagakure, the young ninja celebrate defeating a group of supposed Akatsuki members. Naruto Uzumaki and Sakura Haruno, however, feel differently. Naruto is jealous of his comrades' congratulatory families, wishing for the presence of his own parents. Sakura, on the other hand, is angry at her embarrassing parents, and wishes for no parents at all. The two clash over their opposing ideals, but are faced with a more pressing matter when the masked Madara Uchiha suddenly appears and transports them to an alternate world.\\n\\nIn this world, Sakura's parents are considered heroes—for they gave their lives to protect Konohagakure from the Nine-Tailed Fox attack 10 years ago. Consequently, Naruto's parents, Minato Namikaze and Kushina Uzumaki, are alive and well. Unable to return home or find the masked Madara, Naruto and Sakura stay in this new world and enjoy the changes they have always longed for. All seems well for the two ninja, until an unexpected threat emerges that pushes Naruto and Sakura to not only fight for the Konohagakure of the alternate world, but also to find a way back to their own.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1620/94336l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2012-07-28\",\n        \"rank\": 1282,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae542d\",\n        \"mal_id\": 19511,\n        \"title\": \"Naruto: Shippuuden - Sunny Side Battle\",\n        \"description\": \"Back at their childhood home, siblings Itachi and Sasuke Uchiha experience an unusual morning together when Itachi becomes obsessed with cooking the perfect fried egg for Sasuke. Despite being completely focused on the task, he continuously fails to achieve the desired result. As Sasuke marvels at his brother's seemingly unnecessary behavior, he comes to realize that there is more than meets the eye to Itachi's efforts.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1047/91638l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2013-10-06\",\n        \"rank\": 1584,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541f\",\n        \"mal_id\": 10589,\n        \"title\": \"Naruto: Shippuuden Movie 5 - Blood Prison\",\n        \"description\": \"During their discussion of a sensitive investigation A, the Fourth Raikage, and his subordinates are ambushed by a cloaked intruder. As the Kumogakure leader repels the assault, he is shocked to discover that the culprit is Naruto Uzumaki! \\n\\nHowever, the assassination attempt is not the only crime attributed to the young ninja, who vigorously denies the accusations. To avoid a diplomatic conflict, Tsunade forcibly sends him to Kusagakure's Houzuki Castle—a maximum-security penitentiary dedicated to ninja criminals—until the situation is resolved.\\n\\nDespite his powers being immediately suppressed by Mui, the prison's warden who possesses the ability to seal chakra, Naruto recklessly engages in futile escape attempts. But with the help of two fellow inmates, he realizes that there is more to this legendary detention facility than meets the eye. Uncovering a terrible secret, the trio embarks on a dangerous operation that may be Naruto's only chance to break free and prove his innocence.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1500/134496l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2011-07-30\",\n        \"rank\": 2016,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541d\",\n        \"mal_id\": 8246,\n        \"title\": \"Naruto: Shippuuden Movie 4 - The Lost Tower\",\n        \"description\": \"Led by Yamato, Naruto Uzumaki, Sakura Haruno, and Sai are assigned to capture Mukade, a rogue ninja who is pursuing the ancient chakra Ryuumyaku located underneath the Rouran ruins. While the Ryuumyaku has been sealed by the Fourth Hokage, the group fails to prevent Mukade from releasing its power. Consequently, a strong energy burst engulfs both Naruto and Yamato before they can escape.\\n\\nAs he awakens in a magnificent yet hostile kingdom, Naruto meets its young queen Saara and three Konohagakure ninjas on a top-secret mission. They reveal to him that he has time-traveled to Rouran 20 years into the past! To make matters worse, Mukade has already infiltrated the royal court, becoming the naive queen's most trusted minister under the alias Anrokuzan.\\n\\nJoining forces with the three ninjas, Naruto must protect Saara's life without fail to stop the villain's plans and return to the present.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1479/116734l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2010-07-31\",\n        \"rank\": 2151,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541c\",\n        \"mal_id\": 28755,\n        \"title\": \"Boruto: Naruto the Movie\",\n        \"description\": \"The spirited Boruto Uzumaki, son of Seventh Hokage Naruto, is a skilled ninja who possesses the same brashness and passion his father once had. However, the constant absence of his father, who is busy with his Hokage duties, puts a damper on Boruto's fire. Upon learning that his father will watch the aspiring ninjas who will participate in the upcoming Chunin exams, Boruto is driven to prove to him that he is worthy of his attention. In order to do so, he enlists the help of Naruto's childhood friend and rival, Sasuke Uchiha. \\n\\nThe Chunin exams begin and progress smoothly, until suddenly, the Konohagakure is attacked by a new foe that threatens the long-standing peace of the village. Now facing real danger, Naruto and his comrades must work together to protect the future of their cherished home and defeat the evil that terrorizes their world. As this battle ensues, Boruto comes to realize the struggles his father once experienced—and what it truly means to be a ninja.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/4/78280l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2015-08-07\",\n        \"rank\": 2327,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5429\",\n        \"mal_id\": 10075,\n        \"title\": \"Naruto x UT\",\n        \"description\": \"All-new animation offered throughout UNIQLO clothing stores in Japan on January 1, 2011. The DVD contains an exclusive version of Mayonaka Orchestra, by the Japanese rock band Aqua Timez. A limited number of the DVDs was offered as presents to people who bought UNIQLO's Naruto graphic T-shirts online or in their stores.\\n\\n(Source: ANN, edited)\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/3/30485l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2011-01-01\",\n        \"rank\": 2403,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5428\",\n        \"mal_id\": 6325,\n        \"title\": \"Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono\",\n        \"description\": \"After being sent to investigate the alarming disappearance of four bloodline limit-wielding ninjas from different countries, Kakashi Hatake, Naruto Uzumaki, Sakura Haruno, and Sai successfully discover their whereabouts and inform the Hokage. Unexpectedly, Tsunade's further arrangements fall apart when Hiruko—the mastermind behind the incident and also a former Konohagakure ninja obsessed with power—appears to announce that he has absorbed the missing ninjas' unique abilities. On the verge of becoming invincible, he seeks one more bloodline limit before starting an all-out war to take over the world.\\n\\nAs Konohagakure's past connections with Hiruko raise suspicions among the nations about its involvement in the affair, Tsunade receives an ultimatum to solve the crisis. Left with no other choice, she decides to follow Kakashi's lead after he presents a daring yet salutary scheme—a proposal that could send him to certain death. However, Naruto opposes such a plan! Despite the Hokage's decision, he is determined to save his teacher's life, even if it means fighting friend and foe alike.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1493/116732l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2009-08-01\",\n        \"rank\": 2548,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5420\",\n        \"mal_id\": 32365,\n        \"title\": \"Boruto: Naruto the Movie - Naruto ga Hokage ni Natta Hi\",\n        \"description\": \"Bundled with the limited edition of Blu-ray/DVD of Boruto: Naruto the Movie.\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/6/77678l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2016-07-06\",\n        \"rank\": 2587,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5422\",\n        \"mal_id\": 2472,\n        \"title\": \"Naruto: Shippuuden Movie 1\",\n        \"description\": \"A group of ninja is planning to revive a powerful demon, and once its spirit is reunited with its body, the world will be destroyed. The only way to prevent this from happening is for Shion, a shrine maiden, to seal it away for good.\\n\\nNaruto Uzumaki is tasked to guard her, but one thing stops Shion from accepting his help: she also has the ability to predict death—and she has foreseen his demise approaching soon. In order to escape his fate, Naruto must stay away from Shion; however, undeterred, he chooses to challenge the prophecy in order to protect Shion and the world.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1703/134493l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2007-08-04\",\n        \"rank\": 2763,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae541e\",\n        \"mal_id\": 4437,\n        \"title\": \"Naruto: Shippuuden Movie 2 - Kizuna\",\n        \"description\": \"Unleashing a devastating surprise attack, flying ninjas from the Land of Sky are seeking revenge against their old enemy Konohagakure. Despite his eagerness to join the fight, Naruto Uzumaki is held up by Shinnou, a mysterious doctor who requires his assistance to save an injured person. While delivering the wounded man to the hospital, Naruto has an unexpected encounter with Amaru—a stormy youngster from a neighboring village desperately looking for Shinnou's help.\\n\\nMeanwhile, as the invaders withdraw to restore their forces, Tsunade seizes the opportunity to dispatch a small team including Sai, Shikamaru Nara, and Kakashi Hatake to strike down their base. Simultaneously, she commissions Naruto, Sakura Haruno, and Hinata Hyuuga to accompany Shinnou and Amaru on their journey. During this time, however, Orochimaru has his own schemes: he orders Sasuke Uchiha to bring him the doctor who specializes in the reincarnation technique.\\n\\nAs the escort group accidentally uncovers the sinister truth behind the attacks, tumultuous plans are set in motion. But even when confronted with an unforeseen reunion, Naruto does not waver in his endeavor to end the warfare and its disastrous effects.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1484/134494l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2008-08-02\",\n        \"rank\": 2827,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae542e\",\n        \"mal_id\": 10686,\n        \"title\": \"Naruto: Honoo no Chuunin Shiken! Naruto vs. Konohamaru!!\",\n        \"description\": \"As the Fourth Great Ninja War quickly approaches, Sunagakure hosts a special Chunin exam to strengthen the troops of the Allied Shinobi Forces. Among the participants are Konohamaru Sarutobi, an ambitious rookie, and Naruto Uzumaki, who has become a renowned ninja. Despite the significant disparity in skill, Konohamaru is excited at the prospect of proving himself in a competition against Naruto—the one person he both admires and sees as his rival.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/9/30813l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2011-07-30\",\n        \"rank\": 3319,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5424\",\n        \"mal_id\": 12979,\n        \"title\": \"Naruto SD: Rock Lee no Seishun Full-Power Ninden\",\n        \"description\": \"The competitive shinobi world has proven to be challenging for Rock Lee, who lacks the typically required abilities. To compensate for this handicap, the young ninja tenaciously endures severe training to hone his hand-to-hand combat skills. Whenever necessary, he also resorts to creative fighting techniques. With the constant support of his teammates Neji Hyuuga and Tenten, Lee readily embraces daring adventures as opportunities to advance on his path toward excellence.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/13/36475l.jpg\",\n        \"num_episodes\": 51,\n        \"start_date\": \"2012-04-03\",\n        \"rank\": 3394,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae542b\",\n        \"mal_id\": 4134,\n        \"title\": \"Naruto: Shippuuden - Shippuu! \\\"Konoha Gakuen\\\" Den\",\n        \"description\": \"Naruto school special.\\n\\nNaruto is a new cool student and when he meets Sasuke they start fighting.\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/5/51895l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2008-02-06\",\n        \"rank\": 3554,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5423\",\n        \"mal_id\": 442,\n        \"title\": \"Naruto Movie 1: Dai Katsugeki!! Yuki Hime Shinobu Houjou Dattebayo!\",\n        \"description\": \"Naruto Uzumaki and his squadmates, Sasuke Uchiha and Sakura Haruno, are sent on a mission to escort a movie crew on its way to film in the Land of Snow. They soon find out that they are accompanying a famous actress, Yukie Fujikaze, who persistently refuses to travel there, making the trip far more difficult than originally intended. After a surprising encounter with ninjas from the Land of Snow, Naruto discovers that there is more to Yukie than meets the eye.\\n \\nDai Katsugeki!! Yuki Hime Shinobu Houjou Dattebayo! follows the group as they attempt to overcome the obstacles in the Land of Snow and unveil Yukie's true purpose there as well.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1231/134484l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2004-08-21\",\n        \"rank\": 3637,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae542f\",\n        \"mal_id\": 10659,\n        \"title\": \"Naruto Soyokazeden Movie: Naruto to Mashin to Mitsu no Onegai Dattebayo!!\",\n        \"description\": \"While enjoying a barbecue alongside team members and peers, Naruto Uzumaki stumbles upon a strange old bottle that houses a genie! The mythical being is willing to grant three wishes, but in a flurry of excitement, Naruto ends up wasting the first two. Outraged, Sasuke Uchiha and Sakura Haruno start fighting with him over the last remaining chance.\\n\\nAs the other ninjas join the dispute, the whole matter—before they know it—turns into an all-out brawl for the precious container.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/10/31573l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2010-07-31\",\n        \"rank\": 4366,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5427\",\n        \"mal_id\": 2144,\n        \"title\": \"Naruto Movie 3: Dai Koufun! Mikazuki Jima no Animaru Panic Dattebayo!\",\n        \"description\": \"Led by Kakashi Hatake, Naruto Uzumaki, Sakura Haruno, and Rock Lee are tasked to escort the extravagant Prince Michiru Tsuki and his spoiled son Hikaru to the prosperous Land of Moon when the two return from a long trip around the world. As if guarding two whimsical high-ranked individuals was not challenging enough, the prince's reckless decision to acquire an entire circus during their journey—mainly to entertain Hikaru's wish of owning the saber-toothed tiger featured in the show—further propels the mission into disarray.\\n\\nJust as things are finally settling down, the arrival of Michiru's convoy at the Land of Moon is met with an unforeseen crisis—the greedy Chief Minister Shabadaba has taken over the country with the assistance of mysterious, powerful ninjas. While Kakashi's team relentlessly fights the enemy by any means necessary, the two princes are forced to confront a new outlook on life through adversity.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1918/134487l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2006-08-05\",\n        \"rank\": 4558,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5425\",\n        \"mal_id\": 936,\n        \"title\": \"Naruto Movie 2: Dai Gekitotsu! Maboroshi no Chiteiiseki Dattebayo!\",\n        \"description\": \"In a tumultuous effort, the Sunagakure ninjas attempt to repel an unforeseen invasion of mysterious armored warriors on the Land of Wind. Shortly afterwards, the same armored troops led by Temujin—a skilled knight of impressive power—ambush Naruto Uzumaki, Sakura Haruno, and Shikamaru Nara, who are on a mission to recover a lost ferret. Naruto and Temujin engage in a fierce fight that ends with both of them falling off a cliff.\\n\\nTaken aback by their friend's sudden misfortune, Sakura and Shikamaru witness yet another alarming development: a massive moving structure appears out of nowhere, ravaging any trees and rocks in its path. While Sakura sets off to find Naruto, Shikamaru infiltrates the imposing fortress in hopes of learning more about the critical situation. \\n\\nEntangled in a relentless conflict, the Konohagakure ninjas join forces with their Sunagakure counterparts to defeat the common enemy. However, amidst the turmoil, a clash between two different visions of an ideal world emerges.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1114/134485l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2005-08-06\",\n        \"rank\": 4726,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5436\",\n        \"mal_id\": 2248,\n        \"title\": \"Naruto: Dai Katsugeki!! Yuki Hime Shinobu Houjou Dattebayo! - Konoha no Sato no Dai Undoukai\",\n        \"description\": \"The Konohagakure Grand Sports Festival has begun with all ninja squads vying for the ultimate prize—a whole week of paid leave! Despite his enthusiasm to achieve victory alongside Sasuke Uchiha and Sakura Haruno, Naruto Uzumaki finds himself in a pinch due to unexpected digestion problems. Caught between the competition and his personal emergency, he faces never-ending obstacles in his frantic search for a way out of the troublesome situation.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1/2473l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2004-08-21\",\n        \"rank\": 4794,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5434\",\n        \"mal_id\": 1074,\n        \"title\": \"Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!\",\n        \"description\": \"Konohagakure hosts a special tournament for ninjas of all ranks, stirring up fervor among the rookies who are eager to prove themselves in a competition against their superiors. Additionally, the winner is granted the opportunity to create their own village decree! Despite his enthusiasm to claim the prize, Naruto Uzumaki fails to focus on the game's objective as he becomes obsessed with confronting his teacher, Kakashi Hatake, in single combat.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/10/11244l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2005-12-22\",\n        \"rank\": 5229,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5431\",\n        \"mal_id\": 7367,\n        \"title\": \"Naruto: The Cross Roads\",\n        \"description\": \"The operation to find a missing person goes awry when Kakashi Hatake falls victim to a suspicious trap and gets separated from his students Naruto Uzumaki, Sasuke Uchiha, and Sakura Haruno. To make matters worse, the trio is ambushed by mysterious ninjas who capture Sakura, prompting Naruto and Sasuke to give chase.\\n\\nAs the two boys engage in a dangerous battle, not even Sasuke's troubling discovery about the mission can deter them from their endeavor to reunite the team and accomplish their task.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/11/27050l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2009-10-12\",\n        \"rank\": 5230,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5437\",\n        \"mal_id\": 594,\n        \"title\": \"Naruto: Takigakure no Shitou - Ore ga Eiyuu Dattebayo!\",\n        \"description\": \"After safely escorting the cowardly Takigakure leader Shibuki to his homeland, Naruto Uzumaki, Sasuke Uchiha, and Sakura Haruno are taken aback by the village's sudden invasion of rogue ninjas. As their teacher Kakashi Hatake had departed for Konohagakure beforehand, the team is left to deal with the attacking forces on their own. \\n\\nWhile the group prepares for a rescue operation, they learn that Suien, the mastermind behind the assault, is pursuing the Hero Water—an elixir that briefly increases the chakra of those who drink it by tenfold. Knowing that the liquid is in Shibuki's possession, Suien takes the villagers hostage to use them as a bargaining chip. \\n\\nDespite the odds stacked against them, Naruto fights the enemy heroically, spurring Shibuki on to discover the courage to protect his people.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/11/20921l.webp\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2003-12-20\",\n        \"rank\": 5316,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5432\",\n        \"mal_id\": 761,\n        \"title\": \"Naruto: Akaki Yotsuba no Clover wo Sagase\",\n        \"description\": \"When Konohamaru Sarutobi asks Naruto Uzumaki for help, the latter readily accepts to join his young friend on a special mission—the retrieval of the legendary crimson four-leaf clover, rumored to have the ability to grant any wish. The miraculous plant is seemingly Konohamaru's only hope to prevent the departure of his sweetheart Kaede Yoshino, who must leave Konohagakure on account of her father's job. Despite the unique clover being located in a forbidden area, there is nothing stopping the two from bravely embarking on a perilous adventure to achieve their goal.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/12/11240l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2003-05-24\",\n        \"rank\": 6388,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae542c\",\n        \"mal_id\": 34566,\n        \"title\": \"Boruto: Naruto Next Generations\",\n        \"description\": \"Following the successful end of the Fourth Shinobi World War, Konohagakure has been enjoying a period of peace, prosperity, and extraordinary technological advancement. This is all due to the efforts of the Allied Shinobi Forces and the village's Seventh Hokage, Naruto Uzumaki. Now resembling a modern metropolis, Konohagakure has changed, particularly the life of a shinobi. Under the watchful eye of Naruto and his old comrades, a new generation of shinobi has stepped up to learn the ways of the ninja.\\n\\nBoruto Uzumaki is often the center of attention as the son of the Seventh Hokage. Despite having inherited Naruto's boisterous and stubborn demeanor, Boruto is considered a prodigy and is able to unleash his potential with the help of supportive friends and family. Unfortunately, this has only worsened his arrogance and his desire to surpass Naruto which, along with his father's busy lifestyle, has strained their relationship. However, a sinister force brewing within the village may threaten Boruto's carefree life.\\n\\nNew friends and familiar faces join Boruto as a new story begins.\\n\\n[Written by MAL Rewrite]\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/1091/99847l.webp\",\n        \"num_episodes\": 293,\n        \"start_date\": \"2017-04-05\",\n        \"rank\": 9412,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66704b27f87f65e8caae5433\",\n        \"mal_id\": 36564,\n        \"title\": \"Kamiusagi Rope x Boruto: Naruto Next Generations\",\n        \"description\": \"A 3-way collaboration between Kamiusagi Rope, Boruto: Naruto Next Generations, and TOHO Cinemas. The purpose is to promote a new TOHO theater opening up in Ueno on November 4, 2017. The collaboration video will also be available to view in TOHO Cinemas in Tokyo, Kanagawa, Chiba, and Saitama from Ocotober 21 - December 1.\",\n        \"picture\": \"https://cdn.myanimelist.net/images/anime/3/88377l.jpg\",\n        \"num_episodes\": 1,\n        \"start_date\": \"2017-10-12\",\n        \"rank\": 11625,\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "criação usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Natan Colleoni\",\r\n    \"password\": \"coxinha123\",\r\n    \"age\": 22,\r\n    \"email\": \"natancolleonifonseca@gmail.com.br\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Retorno usuario criado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Natan Colleoni\",\r\n    \"password\": \"coxinha123\",\r\n    \"age\": 22,\r\n    \"email\": \"natancolleonifonseca@gmail.com.br\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "215"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d7-Y7qfGnXrm5IsyrQZyMt3qZ2hxPc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jun 2024 13:24:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6672dc0f44b5af845bb185e0\",\n    \"name\": \"Natan Colleoni\",\n    \"age\": 22,\n    \"email\": \"natancolleonifonseca@gmail.com.br\",\n    \"animes_lists\": [],\n    \"createdAt\": \"2024-06-19T13:24:31.563Z\",\n    \"updatedAt\": \"2024-06-19T13:24:31.563Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"email\": \"natancolleonifonseca@gmail.com.br\",\r\n    \"password\": \"coxinha123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Token exemplo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"email\": \"natancolleonifonseca@gmail.com.br\",\r\n    \"password\": \"coxinha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "255"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ff-SK9WDB2h5fFtndEdOZ/zG6FYcWk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jun 2024 13:24:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY3MmRjMGY0NGI1YWY4NDViYjE4NWUwIiwiZW1haWwiOiJuYXRhbmNvbGxlb25pZm9uc2VjYUBnbWFpbC5jb20uYnIiLCJpYXQiOjE3MTg4MDM0NzksImV4cCI6MTcxODgwNDA3OX0.wshbEcMipoCehV8YDguGe8OB6I7KuybhrkuGHvXNPc0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Criação lista de animes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY3MmRjMGY0NGI1YWY4NDViYjE4NWUwIiwiZW1haWwiOiJuYXRhbmNvbGxlb25pZm9uc2VjYUBnbWFpbC5jb20uYnIiLCJpYXQiOjE3MTg4MDY2OTIsImV4cCI6MTcxODgwNzI5Mn0.LHc8dmgZje7DI6c4bbgz8OLc-x4QKSYEmAxEj2rvRyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"lista de animes ruins\",\r\n    \"animes_list\": [\"66704b27f87f65e8caae542a\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/animes-list",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"animes-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar listas de animes do usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY3MmRjMGY0NGI1YWY4NDViYjE4NWUwIiwiZW1haWwiOiJuYXRhbmNvbGxlb25pZm9uc2VjYUBnbWFpbC5jb20uYnIiLCJpYXQiOjE3MTg4MDY2OTIsImV4cCI6MTcxODgwNzI5Mn0.LHc8dmgZje7DI6c4bbgz8OLc-x4QKSYEmAxEj2rvRyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/animes-list/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"animes-list",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listas de animes do usuario",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/animes-list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"animes-list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "871"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"367-g17e1581ZRfHxBBWNuDT7F8sy/A\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jun 2024 13:58:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6672e3c8dc3f2dad04cd3620\",\n        \"title\": \"lista de animes ruins\",\n        \"animes_list\": [\n            {\n                \"_id\": \"66704b27f87f65e8caae542a\",\n                \"mal_id\": 53236,\n                \"title\": \"Road of Naruto\",\n                \"description\": \"In celebration of 20 years of Naruto, Studio Pierrot posted an anniversary PV on their YouTube channel. The PV is a compilation of newly reworked scenes from Naruto containing new animation.\",\n                \"picture\": \"https://cdn.myanimelist.net/images/anime/1731/128787l.jpg\",\n                \"num_episodes\": 1,\n                \"start_date\": \"2022-10-03\",\n                \"__v\": 0\n            }\n        ],\n        \"owner\": {\n            \"_id\": \"6672dc0f44b5af845bb185e0\",\n            \"name\": \"Natan Colleoni\",\n            \"password\": \"$2b$10$8VZdqE0Qw/DQOKTGqjbEIuNOn9l3wvtckQMAHJz3ohm.K4LZQQ0bq\",\n            \"age\": 22,\n            \"email\": \"natancolleonifonseca@gmail.com.br\",\n            \"animes_lists\": [],\n            \"createdAt\": \"2024-06-19T13:24:31.563Z\",\n            \"updatedAt\": \"2024-06-19T13:24:31.563Z\",\n            \"__v\": 0\n        },\n        \"createdAt\": \"2024-06-19T13:57:28.381Z\",\n        \"updatedAt\": \"2024-06-19T13:57:28.381Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Atualizar lista de animes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY3MmRjMGY0NGI1YWY4NDViYjE4NWUwIiwiZW1haWwiOiJuYXRhbmNvbGxlb25pZm9uc2VjYUBnbWFpbC5jb20uYnIiLCJpYXQiOjE3MTg4MDY2OTIsImV4cCI6MTcxODgwNzI5Mn0.LHc8dmgZje7DI6c4bbgz8OLc-x4QKSYEmAxEj2rvRyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"animes_list\": [\"66704b27f87f65e8caae5430\",\"66704b27f87f65e8caae541a\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/animes-list/6672e8add6b9543318e864af",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"animes-list",
+						"6672e8add6b9543318e864af"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

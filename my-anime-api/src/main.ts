@@ -11,7 +11,11 @@ async function bootstrap() {
   const logger = new Logger();
   const configService = app.get(ConfigService);
 
-  const options = new DocumentBuilder().setTitle('MY ANIME LIST API - BUSSOLA').setVersion('1.0').build();
+  const options = new DocumentBuilder()
+    .addBearerAuth()
+    .setTitle('MY ANIME LIST API - BUSSOLA')
+    .setVersion('1.0')
+    .build();
 
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);

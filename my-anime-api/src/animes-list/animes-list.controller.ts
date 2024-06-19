@@ -4,7 +4,9 @@ import { AuthGuard } from 'src/auth/auth.guard';
 import { CreateAnimesListDto } from './dtos/create-animes-list.dto';
 import { AnimesList } from './schemas/animes-list.schema';
 import { UpdateAnimesListDto } from './dtos/update-animes-list.dto';
-
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+@ApiBearerAuth()
+@ApiTags('ANIMES-LIST')
 @Controller('animes-list')
 @UseGuards(AuthGuard)
 export class AnimesListController {
